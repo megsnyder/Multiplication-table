@@ -1,7 +1,7 @@
 """
 multiplication-table.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Meg
+Credit: https://stackoverflow.com/questions/3249524/print-in-one-line-dynamically (How to keep on one line)
 Assignment:
 
 Write and submit a Python program that prints a multiplication table. The user 
@@ -21,3 +21,12 @@ Height of multiplication table: 8
   7  14  21  28  35  42  49  56  63  70
   8  16  24  32  40  48  56  64  72  80
 """
+column = int(input("Width of multiplication table: "))
+row = int(input("Height of multiplication table: "))
+
+i = 1
+for i in range(1,column + 1):
+    print(i, end=" ")
+    
+for i in range(2,row+1):
+    print(i)
