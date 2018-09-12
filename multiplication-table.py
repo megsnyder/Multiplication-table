@@ -25,8 +25,17 @@ column = int(input("Width of multiplication table: "))
 row = int(input("Height of multiplication table: "))
 
 i = 1
-for i in range(1,column + 1):
-    print(i, end=" ")
-    
-for i in range(2,row+1):
+a = 1
+for i in range(1, column):
+    print(i,end=" ")
+    i+=1
+print(i)
+i=1
+for i in range(1, row):
+    print(i+1, end=" ")
+    for i in range(1, row):
+        print(i*a,end=" ")
+        i+=1
+        a+=1
     print(i)
+    i+=1
