@@ -2,6 +2,7 @@
 multiplication-table.py
 Author: Meg
 Credit: https://stackoverflow.com/questions/3249524/print-in-one-line-dynamically (How to keep on one line)
+https://stackoverflow.com/questions/38475578/how-to-format-output-to-create-space-between-two-variables-in-python-when-printi(format)
 Assignment:
 
 Write and submit a Python program that prints a multiplication table. The user 
@@ -23,19 +24,21 @@ Height of multiplication table: 8
 """
 column = int(input("Width of multiplication table: "))
 row = int(input("Height of multiplication table: "))
+print()
 
+width=
 i = 1
 a = 1
 for i in range(1, column):
-    print(i,end=" ")
+    print('{0:{width}{i}}'.format(i, width=width, i=i),end=' ')
     i+=1
 print(i)
 i=1
 for i in range(1, row):
     print(i+1, end=" ")
-    for i in range(1, row):
-        print(i*a,end=" ")
+    for i in range(1, column-1):
+        print((i+1)*(a+1),end=" ")
         i+=1
-        a+=1
-    print(i)
+    print((i+1)*(a+1))
     i+=1
+    a+=1
