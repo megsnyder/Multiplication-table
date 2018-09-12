@@ -25,20 +25,19 @@ Height of multiplication table: 8
 column = int(input("Width of multiplication table: "))
 row = int(input("Height of multiplication table: "))
 print()
-
-width=
 i = 1
 a = 1
-for i in range(1, column):
-    print('{0:{width}{i}}'.format(i, width=width, i=i),end=' ')
+print(i,end=' ')
+for i in range(2, column):
+    print('{0:>3}'.format(i),end=' ')
     i+=1
-print(i)
+print('{0:>3}'.format(i))
 i=1
 for i in range(1, row):
     print(i+1, end=" ")
     for i in range(1, column-1):
-        print((i+1)*(a+1),end=" ")
+        print('{0:>3}'.format((i+1)*(a+1)),end=' ')
         i+=1
-    print((i+1)*(a+1))
+    print('{0:>3}'.format((i+1)*(a+1)))
     i+=1
     a+=1
